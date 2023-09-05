@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A37A5DC4-C64B-4053-90CB-98112697E468}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kofee_Manila</RootNamespace>
+    <AssemblyName>Kofee Manila</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteDB, Version=5.0.17.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.5.0.17\lib\net45\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sections\frmAddOns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\frmAddOns.Designer.cs">
+      <DependentUpon>frmAddOns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\frmFrape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\frmFrape.Designer.cs">
+      <DependentUpon>frmFrape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\frmFruitTea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\frmFruitTea.Designer.cs">
+      <DependentUpon>frmFruitTea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\frmIcedCoffee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\frmIcedCoffee.Designer.cs">
+      <DependentUpon>frmIcedCoffee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\frmMilktea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\frmMilktea.Designer.cs">
+      <DependentUpon>frmMilktea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls %28Large%29\UC_Frape_Large.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls %28Large%29\UC_Frape_Large.Designer.cs">
+      <DependentUpon>UC_Frape_Large.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls %28Large%29\UC_FruitTea_Large.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls %28Large%29\UC_FruitTea_Large.Designer.cs">
+      <DependentUpon>UC_FruitTea_Large.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls %28Large%29\UC_IcedCoffee_Large.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls %28Large%29\UC_IcedCoffee_Large.Designer.cs">
+      <DependentUpon>UC_IcedCoffee_Large.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls %28Large%29\UC_MilkTea_Large.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls %28Large%29\UC_MilkTea_Large.Designer.cs">
+      <DependentUpon>UC_MilkTea_Large.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls %28Small%29\UC_Frape_Small.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls %28Small%29\UC_Frape_Small.Designer.cs">
+      <DependentUpon>UC_Frape_Small.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls %28Small%29\UC_FruitTea_Small.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls %28Small%29\UC_FruitTea_Small.Designer.cs">
+      <DependentUpon>UC_FruitTea_Small.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls %28Small%29\UC_IcedCofee_Small.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls %28Small%29\UC_IcedCofee_Small.Designer.cs">
+      <DependentUpon>UC_IcedCofee_Small.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls %28Small%29\UC_MilkTea_Small.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls %28Small%29\UC_MilkTea_Small.Designer.cs">
+      <DependentUpon>UC_MilkTea_Small.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Sections\frmAddOns.resx">
+      <DependentUpon>frmAddOns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\frmFrape.resx">
+      <DependentUpon>frmFrape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\frmFruitTea.resx">
+      <DependentUpon>frmFruitTea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\frmIcedCoffee.resx">
+      <DependentUpon>frmIcedCoffee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\frmMilktea.resx">
+      <DependentUpon>frmMilktea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls %28Large%29\UC_Frape_Large.resx">
+      <DependentUpon>UC_Frape_Large.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls %28Large%29\UC_FruitTea_Large.resx">
+      <DependentUpon>UC_FruitTea_Large.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls %28Large%29\UC_IcedCoffee_Large.resx">
+      <DependentUpon>UC_IcedCoffee_Large.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls %28Large%29\UC_MilkTea_Large.resx">
+      <DependentUpon>UC_MilkTea_Large.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls %28Small%29\UC_Frape_Small.resx">
+      <DependentUpon>UC_Frape_Small.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls %28Small%29\UC_FruitTea_Small.resx">
+      <DependentUpon>UC_FruitTea_Small.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls %28Small%29\UC_IcedCofee_Small.resx">
+      <DependentUpon>UC_IcedCofee_Small.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls %28Small%29\UC_MilkTea_Small.resx">
+      <DependentUpon>UC_MilkTea_Small.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
